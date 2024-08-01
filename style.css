@@ -95,8 +95,8 @@ select {
   }
   main {
     max-width: 90%;
-    margin: 70px auto;
-    height: 700px;
+    margin: 50px auto;
+    height: 750px;
   }
 
   .filho-main {
@@ -114,8 +114,14 @@ select {
 
   select {
     margin: 5px 0 30px 0;
+    height: 40px;
   }
   input {
     margin: 5px 0 30px 0;
+    height: 40px;
+  }
+  button {
+    height: 60px;
+    font-size: 22px;
   }
 }
