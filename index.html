@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Conversor de Moedas</title>
+  </head>
+  <body>
+    <section class="principal">
+      <img class="img-gif" src="./assets/logo.gif" alt="" />
+      <main>
+        <div class="filho-main">
+          <section class="input-section">
+            <p class="p-titulo-menor">Converter <b>de</b></p>
+            <select name="">
+              <option value="">Real brasileiro</option>
+              <option value="">Dolar americano</option>
+              <option value="">Euro</option>
+              <option value="">Libra</option>
+            </select>
+            <p class="p-titulo-menor">Converter <b>para</b></p>
+            <select name="">
+              <option value="">US$ Dolar americano</option>
+              <option value="">Euro</option>
+              <option value="">Libra</option>
+              <option value="">Real brasileiro</option>
+            </select>
+            <label class="p-titulo-menor" for=""
+              >Valor<input type="text" placeholder="R$ 10.000.00"
+            /></label>
+            <button>Converter</button>
+          </section>
+          <section class="container-down">
+            <div class="bloco-brasil">
+              <img
+                id="logo-brasil"
+                src="./assets/Brazilian_Flag_-_round.svg.webp"
+                alt=""
+              />
+              <p class="p-titulo-menor">Real</p>
+              <p>R$ 10.000.00</p>
+            </div>
+            <img class="seta" src="./assets/Vector.png" alt="" />
+            <div class="bloco-estados-unidos">
+              <img
+                id="eua"
+                src="./assets/united-states-flag-round-icon-american-flag-png.webp"
+                alt=""
+              />
+              <p class="p-titulo-menor">Dolar americano</p>
+              <p>US$ 2.000.00</p>
+            </div>
+          </section>
+        </div>
+      </main>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
