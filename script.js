@@ -39,4 +39,6 @@ function mudarBandeira() {
     bandeiraLogo.src =
       "./assets/united-states-flag-round-icon-american-flag-png.webp";
   }
+  convertValue()
 }
+

@@ -28,12 +28,12 @@ main {
   margin: 20px auto;
 }
 #logo-brasil {
-  width: 30px;
-  margin: 5px 0;
+  width: 50px;
+  
 }
 .eua {
-  width: 30px;
-  margin: 5px 0;
+  width: 50px;
+  
 }
 .input-section {
   display: flex;
@@ -61,7 +61,7 @@ button:hover {
 }
 .seta {
   height: 40px;
-  margin: 5px 0;
+  
 }
 
 label {
