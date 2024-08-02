@@ -31,13 +31,17 @@ main {
   width: 30px;
   margin: 5px 0;
 }
-#eua {
+.eua {
   width: 30px;
   margin: 5px 0;
 }
 .input-section {
   display: flex;
   flex-direction: column;
+}
+.valor-exibido-a-converter, .valor-exibido-convertido {
+  font-weight: 600;
+  font-size: 20px;
 }
 button {
   width: 100%;
