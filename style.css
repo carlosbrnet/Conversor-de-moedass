@@ -29,17 +29,16 @@ main {
 }
 #logo-brasil {
   width: 50px;
-  
 }
 .eua {
   width: 50px;
-  
 }
 .input-section {
   display: flex;
   flex-direction: column;
 }
-.valor-exibido-a-converter, .valor-exibido-convertido {
+.value-showed-input,
+.value-showed-output {
   font-weight: 600;
   font-size: 20px;
 }
@@ -61,7 +60,6 @@ button:hover {
 }
 .seta {
   height: 40px;
-  
 }
 
 label {
@@ -90,8 +88,12 @@ select {
 
   text-align: center;
 }
-.p-titulo-menor {
-  font-size: 12px;
+.text-value-output {
+  font-size: 16px;
+}
+.byCarlos {
+  font-size: 13px;
+  text-align: center;
 }
 @media screen and (max-width: 445px) {
   .img-gif {
@@ -130,7 +132,5 @@ select {
   button {
     height: 60px;
     font-size: 22px;
-    
-    
   }
 }

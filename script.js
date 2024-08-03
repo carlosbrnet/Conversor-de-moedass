@@ -1,44 +1,61 @@
-/*MAPEANDO O BOTÃO*/
-const novaIdentidadeDoButton = document.querySelector("button");
-const selectDesaida = document.querySelector(".select");
-const textoDolar = document.querySelector(".texto-dolar");
-const bandeiraLogo = document.querySelector(".eua");
+           /*MAPEAMENTO DAS TAGS, E CLASS*/
+const convertButton = document.querySelector(".convert-button");
+const valueShowedInput = document.querySelector(".value-showed-input");
+const valueShowedOutput = document.querySelector(".value-showed-output");
+const selectValue = document.querySelector(".select-value");
+const flagcountry = document.querySelector(".eua");
+const textValueOutput = document.querySelector(".text-value-output"); 
 
-/*AGUARDANDO O EVENTO DE CLICK*/
-novaIdentidadeDoButton.addEventListener("click", convertValue);
-
-/*AQUI NA FUNÇÃO VAI O EVENTO*/
+/*COMEÇO DA FUNÇÃO DE CONVERSÃO*/
 function convertValue() {
-  const valorAconverter = document.querySelector(".valorDigitado").value;
-
-  const exibicaoEntrada = document.querySelector(".valor-exibido-a-converter");
-  const exibicaoSaida = document.querySelector(".valor-exibido-convertido");
-
-  const dolarToday = 5.2;
-
-  exibicaoEntrada.innerHTML = new Intl.NumberFormat("pt-BR", {
+  const inputValue = document.querySelector(".input-value").value;
+  const dolarToday = 5.71;
+  const euroToday = 6.22;
+  const libraToday = 7.30;
+  valueShowedInput.innerHTML = new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
-  }).format(valorAconverter);
-
-  exibicaoSaida.innerHTML = new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "USD",
-  }).format(valorAconverter / dolarToday);
+  }).format(inputValue);
+  if (selectValue.value == "Dolar") {
+    valueShowedOutput.innerHTML = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(inputValue / dolarToday);
+    textValueOutput.innerHTML = "Dolar";
+  }
+  if (selectValue.value == "Euro") {
+    valueShowedOutput.innerHTML = new Intl.NumberFormat("de-DE", {
+      style: "currency",
+      currency: "EUR",
+    }).format(inputValue / euroToday);
+    textValueOutput.innerHTML = "Euro";
+  }
+  if (selectValue.value == "Libra") {
+    valueShowedOutput.innerHTML = new Intl.NumberFormat("en-GB", {
+      style: "currency",
+      currency: "GBP",
+    }).format(inputValue / libraToday);
+    textValueOutput.innerHTML = "Euro";
+  }
 }
 
-selectDesaida.addEventListener("change", mudarBandeira);
-
-function mudarBandeira() {
-  if (selectDesaida.value == "Euro") {
-    textoDolar.innerHTML = "Euro";
-    bandeiraLogo.src = "./assets/euro.png";
-  }
-  if (selectDesaida.value == "Dolar") {
-    textoDolar.innerHTML = "Dolar";
-    bandeiraLogo.src =
+/*INICIO DA FUNÇÃO TROCAR TEXTO E BANDEIRA*/
+function changeflag() {
+  if (selectValue.value == "Dolar") {
+    flagcountry.src =
       "./assets/united-states-flag-round-icon-american-flag-png.webp";
+    textValueOutput.innerHTML = "Dolar";
   }
-  convertValue()
+  if (selectValue.value == "Euro") {
+    flagcountry.src = "./assets/euro.png";
+    textValueOutput.innerHTML = "Euro";
+  }
+  if (selectValue.value == "Libra") {
+    flagcountry.src = "./assets/libra 1.png";
+    textValueOutput.innerHTML = "Libra";
+  }
 }
 
+/*ESCUTANDO O EVENTO QUE VAI ROLAR*/
+convertButton.addEventListener("click", convertValue);
+selectValue.addEventListener("change", changeflag);

@@ -7,6 +7,7 @@
     <title>Conversor de Moedas</title>
   </head>
   <body>
+    
     <section class="principal">
       <img class="img-gif" src="./assets/logo.gif" alt="" />
       <main>
@@ -15,23 +16,24 @@
             <p class="p-titulo-menor">Converter <b>de</b></p>
             <select name="">
               <option>Real</option>
-              <option>Dolar</option>
-              <option>Euro</option>
+            <option >Sem mais opções de entrada...</option>
+              <option></option>
             </select>
             <p class="p-titulo-menor">Converter <b>para</b></p>
-            <select class="select" name="">
+            <select class="select-value" name="">
               <option>Dolar</option>
               <option>Euro</option>
+              <option>Libra</option>
             </select>
 
-            <label class="p-titulo-menor" for=""
+            <label class="p-titulo-menor"
               >Valor<input
-                class="valorDigitado"
+                class="input-value"
                 type="text"
                 placeholder="R$ 0,00"
             /></label>
 
-            <button>Converter</button>
+            <button class="convert-button">Converter</button>
           </section>
           <section class="container-down">
             <div class="bloco-brasil">
@@ -41,7 +43,7 @@
                 alt=""
               />
               <p class="p-titulo-menor">Real</p>
-              <p class="valor-exibido-a-converter">R$ 00,00</p>
+              <p class="value-showed-input">R$ 00,00</p>
             </div>
             <img class="seta" src="./assets/Vector.png" alt="" />
             <div class="bloco-estados-unidos">
@@ -50,11 +52,12 @@
                 src="./assets/united-states-flag-round-icon-american-flag-png.webp"
                 alt=""
               />
-              <p class="p-titulo-menor texto-dolar">Dolar americano</p>
-              <p class="valor-exibido-convertido">US$ 00,00</p>
+              <p class="text-value-output">Dolar americano</p>
+              <p class="value-showed-output">US$ 00,00</p>
             </div>
           </section>
         </div>
+        <p class="byCarlos">by Carlos</p>
       </main>
     </section>
 
